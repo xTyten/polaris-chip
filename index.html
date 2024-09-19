@@ -19,6 +19,11 @@
     polaris-chip {
       margin: 16px;
     }
+    .card-container {
+      display: flex;
+      gap: 16px;
+      margin: 24px;
+    }
   </style>
   <title>polaris-chip / my-card</title>
 </head>
@@ -26,13 +31,19 @@
 <body>
   <h1>polaris-chip</h1>
   <!-- this is going to do whatever the tag's defaults are -->
-  <polaris-chip title="News of Record" link="https://psu.edu/"></polaris-chip>
+  <polaris-chip title="News of Record" link="https://psu.edu/" shiny></polaris-chip>
   <polaris-chip title="Faculty and Staff"></polaris-chip>
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
   <h1>my-card</h1>
-  <my-card></my-card>
+  <div class="card-container">
+    <my-card title="sad little alien" link="https://x.com/lilalienz4ever/status/1836136703687561727" description="someone help him 😭" bg="background-color: #8fe44e"></my-card>
+    <my-card title="moo deng" image="https://images.prestigeonline.com/wp-content/uploads/sites/8/2024/09/15123504/459118063_539597145247047_8853740358288590339_n.jpeg" link="https://www.npr.org/2024/09/18/nx-s1-5115841/meet-moo-deng-baby-pygmy-hippo" description="moo deng is only 2 months old!" bg="background-color: #8b7c90"></my-card>
+    <my-card title="Jack Frost" image="https://megatenwiki.com/images/6/6e/SMT5_Jack_Frost_Artwork.png" link="https://megatenwiki.com/wiki/Jack_Frost" description="hee ho" bg="background-color: #6569b4"></my-card>
+    <my-card title="Pochita" image="https://avatarfiles.alphacoders.com/375/375335.jpeg" link="https://youtu.be/GZALpA0-Qcc?si=e68UxfjczwaWgzoG" description="chainsaw dog" bg="background-color: #d27d48"></my-card>
+    <my-card title="Spongebob" link="https://youtu.be/W9gdRDcnNxs?si=D12rMOpBymlU7-he" image="https://www.spongebobshop.com/cdn/shop/products/SB-Standees-Spong-3_1200x.jpg?v=1603744568" description="Hi, I'm Spongebob" bg="background-color: #f7e948"></my-card>
+  </div>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
