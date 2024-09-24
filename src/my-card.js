@@ -18,7 +18,7 @@ export class MyCard extends LitElement {
     this.link = "#";
     this.image = "";
     this.description = "";
-    this.bg = "background-color: white";
+    //this.bg = "background-color: white";
     
   }
 
@@ -34,8 +34,8 @@ export class MyCard extends LitElement {
       .card-wrapper {
         border: solid;
         width: 232px;
-        //background-color: beige;
         box-shadow: 8px 8px black;
+        background-color: var(--bgColor, white);
       }
       .inner-wrapper {
         margin: auto;
@@ -71,7 +71,8 @@ export class MyCard extends LitElement {
 
   render() {
     return html`
-      <div class="card-wrapper" style="${this.bg}">
+      <div class="card-wrapper">
+      <!-- <div class="card-wrapper" style="${this.bg}"> -->
         <div class="inner-wrapper">
           <img src="${this.image}" width="200">
           <h3>${this.title}</h3>
