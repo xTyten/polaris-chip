@@ -14,11 +14,11 @@ export class MyCard extends LitElement {
 
   constructor() {
     super();
-    this.title = "My card";
+    this.title = "";
     this.link = "#";
-    this.image = "https://pbs.twimg.com/media/GXtEl7TakAUuJL5?format=png&name=small";
-    this.description = "example description";
-    this.bg = "background-color: beige";
+    this.image = "";
+    this.description = "";
+    this.bg = "background-color: white";
     
   }
 
@@ -75,7 +75,7 @@ export class MyCard extends LitElement {
         <div class="inner-wrapper">
           <img src="${this.image}" width="200">
           <h3>${this.title}</h3>
-          <p>${this.description}</p>
+          <p><slot>${this.description}</slot></p>
           <a href="${this.link}" id="button-link" target="_blank"><button>Details</button></a>
         </div>
       </div>

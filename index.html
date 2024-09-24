@@ -21,8 +21,11 @@
     }
     .card-container {
       display: flex;
-      gap: 16px;
+      gap: 16px;  
       margin: 24px;
+    }
+    polaris-chip[shiny] {
+      --my-card-fancy-bg: #f5d442;
     }
   </style>
   <title>polaris-chip / my-card</title>
@@ -38,11 +41,41 @@
 
   <h1>my-card</h1>
   <div class="card-container">
-    <my-card title="sad little alien" link="https://x.com/lilalienz4ever/status/1836136703687561727" description="someone help him 😭" bg="background-color: #8fe44e"></my-card>
-    <my-card title="moo deng" image="https://images.prestigeonline.com/wp-content/uploads/sites/8/2024/09/15123504/459118063_539597145247047_8853740358288590339_n.jpeg" link="https://www.npr.org/2024/09/18/nx-s1-5115841/meet-moo-deng-baby-pygmy-hippo" description="moo deng is only 2 months old!" bg="background-color: #8b7c90"></my-card>
-    <my-card title="Jack Frost" image="https://megatenwiki.com/images/6/6e/SMT5_Jack_Frost_Artwork.png" link="https://megatenwiki.com/wiki/Jack_Frost" description="hee ho" bg="background-color: #6569b4"></my-card>
-    <my-card title="Pochita" image="https://avatarfiles.alphacoders.com/375/375335.jpeg" link="https://youtu.be/GZALpA0-Qcc?si=e68UxfjczwaWgzoG" description="chainsaw dog" bg="background-color: #d27d48"></my-card>
-    <my-card title="Spongebob" link="https://youtu.be/W9gdRDcnNxs?si=D12rMOpBymlU7-he" image="https://www.spongebobshop.com/cdn/shop/products/SB-Standees-Spong-3_1200x.jpg?v=1603744568" description="Hi, I'm Spongebob" bg="background-color: #f7e948"></my-card>
+    <my-card 
+      title="sad little alien" 
+      image="https://pbs.twimg.com/media/GXtEl7TakAUuJL5?format=png&name=small"
+      link="https://x.com/lilalienz4ever/status/1836136703687561727"  
+      bg="background-color: #8fe44e">
+      someone help him 😭
+    </my-card>
+    <my-card 
+      title="moo deng" 
+      image="https://images.prestigeonline.com/wp-content/uploads/sites/8/2024/09/15123504/459118063_539597145247047_8853740358288590339_n.jpeg" 
+      link="https://www.npr.org/2024/09/18/nx-s1-5115841/meet-moo-deng-baby-pygmy-hippo" 
+      bg="background-color: #8b7c90">
+      !!! MOO DENG !!!
+    </my-card>
+    <my-card 
+      title="Jack Frost" 
+      image="https://megatenwiki.com/images/6/6e/SMT5_Jack_Frost_Artwork.png" 
+      link="https://megatenwiki.com/wiki/Jack_Frost" 
+      bg="background-color: #6569b4">
+      hee ho
+    </my-card>
+    <my-card 
+      title="Pochita" 
+      image="https://avatarfiles.alphacoders.com/375/375335.jpeg" 
+      link="https://youtu.be/GZALpA0-Qcc?si=e68UxfjczwaWgzoG" 
+      bg="background-color: #d27d48">
+      chainsaw dog
+    </my-card>
+    <my-card 
+      title="Spongebob" 
+      link="https://youtu.be/W9gdRDcnNxs?si=D12rMOpBymlU7-he" 
+      image="https://www.spongebobshop.com/cdn/shop/products/SB-Standees-Spong-3_1200x.jpg?v=1603744568"
+      bg="background-color: #f7e948">
+      Hi, I'm Spongebob
+    </my-card>
   </div>
 
   <!-- this is what is bringing in the definition for this tag -->
