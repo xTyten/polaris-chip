@@ -19,19 +19,17 @@
     polaris-chip {
       margin: 16px;
     }
-    .card-container {
+    #card-container {
       display: flex;
       gap: 16px;  
       margin: 24px;
+      flex-wrap: wrap;
+      width: 1300px;
     }
     polaris-chip[shiny] {
-      --my-card-fancy-bg: #f5d442;
+      --my-card-shiny-bg: #f5d442;
     }
-    /*
-    my-card{
-      --bgColor: #8fe44e;
-    }
-    */  
+
     #card1{
       --bgColor: #8fe44e;
     }
@@ -47,6 +45,11 @@
     #card5{
       --bgColor: #f7e948;
     }
+
+    .white-bg {
+      --bgColor: #fff !important;
+    }
+
   </style>
   <title>polaris-chip / my-card</title>
 </head>
@@ -59,8 +62,17 @@
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
+  <h1>Controls</h1>
+  <div class="control-wrapper">
+    <button id="duplicate">Clone Card</button>
+    <button id="change-title">Change title</button>
+    <button id="change-img">Change image</button>
+    <button id="change-bg">Change background</button>
+    <button id="delete-card">Delete last card</button>
+  </div>
+  
   <h1>my-card</h1>
-  <div class="card-container">
+  <div id="card-container">
     <my-card 
       id="card1"
       title="sad little alien" 
@@ -94,13 +106,14 @@
       title="Spongebob" 
       link="https://youtu.be/W9gdRDcnNxs?si=D12rMOpBymlU7-he" 
       image="https://www.spongebobshop.com/cdn/shop/products/SB-Standees-Spong-3_1200x.jpg?v=1603744568">
-      Hi, I'm Spongebob
+      Hi, I'm Spongebob AAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
     </my-card>
   </div>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
+  <script type="module" src="./src/myscripts.js"></script>
 </body>
 
 </html>

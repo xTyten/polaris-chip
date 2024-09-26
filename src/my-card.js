@@ -18,6 +18,7 @@ export class MyCard extends LitElement {
     this.link = "#";
     this.image = "";
     this.description = "";
+    this.fancy = false;
     //this.bg = "background-color: white";
     
   }
@@ -26,6 +27,12 @@ export class MyCard extends LitElement {
     return css`
       :host {
         display: block;
+      }
+      :host([fancy]) .card-wrapper{
+        display: block;
+        background-color: pink;
+        border: 2px solid fuchsia;
+        box-shadow: 10px 5px 5px red;
       }
       a:hover, a:visited, a:link, a:active {
         text-decoration: none;
@@ -43,12 +50,13 @@ export class MyCard extends LitElement {
         margin-top: 16px;
         margin-bottom: 16px;
       }
-      p {
+      p,
+      .description-wrapper {
         font-family: Roboto;
         margin-top: 6px;
         margin-bottom: 4px;
       }
-      h3 {
+      h3, summary {
         font-size: 24px;
         font-family: 'Brush Script MT', cursive;
         margin: 0;
@@ -62,24 +70,82 @@ export class MyCard extends LitElement {
         box-shadow: 4px 4px black;
         margin-top: 0px;
       }
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; // fills image instead of stretching
+      }
       button:hover {
         box-shadow: 0px 0px black;
         background-color: #ad7d9a;
       }
+
+      details summary {
+        overflow: auto;
+      }
+      details[open] summary {
+        font-weight: bold;
+      }
+      details div {
+        text-align: left;
+        height: 100px ;
+        overflow: auto;
+        word-wrap: break-word;
+      }
     `;
   }
-
+  /*
+  openChanged(e) {
+    console.log(e.newState);
+    if (e.newState === "open") {
+      this.fancy = true;
+    }
+    else {
+      this.fancy = false;
+    }
+  }
+  */
+  
+  openChanged(e) {
+    console.log(e);
+    if (e.target.getAttribute('open') !== null) {
+      this.fancy = true;
+      // console.log(this.fancy);
+    }
+    else {
+      this.fancy = false;
+      // console.log(this.fancy);
+    }
+  }
+  
   render() {
     return html`
       <div class="card-wrapper">
       <!-- <div class="card-wrapper" style="${this.bg}"> -->
         <div class="inner-wrapper">
-          <img src="${this.image}" width="200">
+          <img src="${this.image}">
+          <!--
           <h3>${this.title}</h3>
           <p><slot>${this.description}</slot></p>
+          @ is shorthand for event listener
+          -->
+          <details ?open="${this.fancy}" @toggle="${this.openChanged}">
+            <summary>${this.title}</summary>
+            <div class="description-wrapper">
+              <slot>${this.description}</slot>
+            </div>
+          </details>
           <a href="${this.link}" id="button-link" target="_blank"><button>Details</button></a>
         </div>
       </div>
+      <!--
+      <details ?open="${this.fancy}">
+        <summary>Description</summary>
+        <div>
+          <slot>${this.description}</slot>
+        </div>
+      </details>
+      -->
     `;
   }
 
@@ -90,6 +156,7 @@ export class MyCard extends LitElement {
       image: { type: String },
       description: { type: String },
       bg: { type: String},
+      fancy: { type: Boolean, reflect: true}
     };
   }
 }

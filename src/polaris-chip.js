@@ -52,7 +52,7 @@ export class PolarisChip extends LitElement {
       }
 
       :host([shiny]) span {
-        background-color: var(--my-card-fancy-bg, yellow);
+        background-color: var(--my-card-shiny-bg, yellow);
       }
 
       span {
