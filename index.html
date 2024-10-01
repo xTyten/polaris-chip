@@ -79,6 +79,12 @@
       image="https://pbs.twimg.com/media/GXtEl7TakAUuJL5?format=png&name=small"
       link="https://x.com/lilalienz4ever/status/1836136703687561727">
       someone help him 😭
+      <multiple-choice randomize="" typeof="oer:Assessment" resource="#6400762a-2b00-60d6-9410-db72d033c61a" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " correct-text="Let's go VGK!" incorrect-text="NOOOoooo!!!" check-label="Check answer" reset-label="Reset" correct-icon="icons:thumb-up" incorrect-icon="icons:thumb-down" quiz-name="default" question="What is 2+2?" single-option="" max-attempts="0">
+        <input type="checkbox" value="1" role="textbox">
+        <input type="checkbox" value="2">
+        <input type="checkbox" value="4" correct="correct">
+        <input type="checkbox" value="3">
+      </multiple-choice>
     </my-card>
     <my-card 
       id="card2"
@@ -93,6 +99,17 @@
       image="https://megatenwiki.com/images/6/6e/SMT5_Jack_Frost_Artwork.png" 
       link="https://megatenwiki.com/wiki/Jack_Frost">
       hee ho
+      <multiple-choice randomize="" accent-color="grey" typeof="oer:Assessment" resource="#6400762a-2b00-60d6-9410-db72d033c61a"
+      prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org "
+      correct-text="Let's go VGK!" incorrect-text="NOOOoooo!!!" check-label="Check answer"
+      reset-label="Reset" correct-icon="icons:thumb-up" incorrect-icon="icons:thumb-down"
+      quiz-name="default" question="What element can Jack Frost use?" single-option=""
+      max-attempts="0">
+        <input type="checkbox" value="Force" role="textbox">
+        <input type="checkbox" value="Fire">
+        <input type="checkbox" value="Ice" correct="correct">
+        <input type="checkbox" value="Electric">
+      </multiple-choice>
     </my-card>
     <my-card 
       id="card4"
@@ -110,10 +127,20 @@
     </my-card>
   </div>
 
+  <!--
+  <multiple-choice randomize="" typeof="oer:Assessment" resource="#6400762a-2b00-60d6-9410-db72d033c61a" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " correct-text="Let's go VGK!" incorrect-text="NOOOoooo!!!" check-label="Check answer" reset-label="Reset" correct-icon="icons:thumb-up" incorrect-icon="icons:thumb-down" quiz-name="default" question="What is 2+2?" single-option="" max-attempts="0">
+    <input type="checkbox" value="1" role="textbox">
+    <input type="checkbox" value="2">
+    <input type="checkbox" value="4" correct="correct">
+    <input type="checkbox" value="3">
+  </multiple-choice>
+  -->
+
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
   <script type="module" src="./src/myscripts.js"></script>
+  <script type="module" src="https://cdn.hax.cloud/cdn/build/es6/node_modules/@haxtheweb/multiple-choice/multiple-choice.js"></script>
 </body>
 
 </html>

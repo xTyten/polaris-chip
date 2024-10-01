@@ -40,15 +40,15 @@ export class MyCard extends LitElement {
       }
       .card-wrapper {
         border: solid;
-        width: 232px;
+        width: 448px;
         box-shadow: 8px 8px black;
         background-color: var(--bgColor, white);
       }
       .inner-wrapper {
         margin: auto;
-        width: 200px;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        width: 400px;
+        margin-top: 24px;
+        margin-bottom: 24px;
       }
       p,
       .description-wrapper {
@@ -88,7 +88,7 @@ export class MyCard extends LitElement {
       }
       details div {
         text-align: left;
-        height: 100px ;
+        height: 400px;
         overflow: auto;
         word-wrap: break-word;
       }
